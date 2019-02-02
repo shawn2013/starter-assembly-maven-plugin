@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 server_root=`pwd`
-classpath="$server_root/conf:`echo lib/*.jar | tr ' ' ':'`"
+classpath="$server_root/conf:$server_root/webapp:`echo lib/*.jar | tr ' ' ':'`"
 if test -e ${server_root}/conf/env ; then
     source ${server_root}/conf/env
 fi
